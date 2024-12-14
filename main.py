@@ -1,9 +1,19 @@
 world_size = get_world_size()
-hay = 5000
-wood = 2000
-carrot = 1000
-pumpkin = 2500
-pumpkin_map = []
+amounts_needed = {
+	Items.Hay: 35000,
+	Items.Wood: 30000, 
+	Items.Carrot: 25000,	
+	Items.Pumpkin: 20000, 	
+	Items.Power: 2000
+}
+
 
 while True:
-	traverse_grid()
+	farm_function = farm()
+	
+	if farm_function:
+		farm_function()
+	else:
+		break
+	
+	
